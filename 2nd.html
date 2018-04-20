@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Login</title>
+	<style type="text/css">
+		.main{
+			width: 100%;
+			height: auto;
+			float: left;
+		}
+		.st{
+			padding:0px;
+			margin: 0px;
+			height: auto;
+			width: 20%;
+			font-size: 25px;
+			font-weight: bold;
+			/*background-color: red;*/
+			float: left;
+			
+		}
+		.st h2{
+			color: black;
+			font-size: 45px;
+			font-weight: bold;
+			margin-left: 15%;
+		}
+		ul{
+			height: auto;
+		}
+		a{
+			/*float: left;*/
+			/*text-align: center;*/
+			text-decoration: none;
+			color: white;
+			text-align: center;
+			border-bottom: solid 3px ;
+			/*padding-top: 5px;*/
+		}
+		li{
+			list-style-type: none;
+			color: white;
+		}
+	#Jd{
+		padding: 5px;
+		height: auto;
+		width: 500px;
+		background-color: #A9A9A9; 
+		margin-left: 500px;
+		margin-top: 30px;
+		/*border: solid;*/
+		
+	}
+	#frm{
+		width: 100%;
+		height: auto;
+		margin-left: 10%;
+		/*background-color: blue;*/
+	}
+	#Jd h1{
+		color: white;
+		text-align: center;
+		font-size: 35px;
+	}
+	label{
+		height: 30px;
+		width: 25%;
+		color: white;
+		float: left;
+		margin-top: 25px;
+		margin-left: 3%;
+		font-size: 25px;
+	}
+		input{
+			height: 30px;
+			width: 75%;
+			margin-left: 5%;	
+			/*float: left;*/
+			/*margin-left: 30px;*/
+			margin-top: 10px; 
+			border-bottom: 2px solid black;
+		}
+	#Jadhya{
+		width: 40%;
+		height: auto;
+		background-color: white;
+		margin-left: 30%;
+		margin-top: 50px;
+		font-weight: bold;
+		font-size: 20px;
+		/*color: skyblue;*/
+	}
+	</style>
+
+	<script type="text/javascript">
+function validate()
+{
+	if (myform.email.value=="") 
+	{
+		alert("Please enter the email");
+		myform.email.focus();
+		return false;
+	}
+
+	var reg= /^([a-z0-9._%+-])+@([a-z0-9.-])+\.([a-z]{2,4})$/ ;
+	if(reg.test(myform.email.value)==false)
+	{
+		alert("Invalid email");
+		myform.email.focus();
+
+		return false;
+	}
+	if (myform.password.value=="") 
+	{
+		alert("Please enter the email");
+		myform.passwords.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1>My Final Website Page</h1>
+	</div>
+	<div class="main">
+		<div class="st">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="1st.html">Register</a></li>
+				<li><a href="credit.html">Billing Form</li></a>
+			</ul>
+		</div>
+		<div id="Jd">
+		<form action="home.html">
+			<h1>Login</h1>
+			<div id="frm">
+				<label>Email : </label><input type="email" name="email" placeholder="email"/><br>
+			</div>
+			<div id="frm">
+				<label>Password : </label><input type="password" name="password" placeholder="password"/><br>
+			</div>
+			<input type="submit" id="Jadhya" name="Login" value="Login" onclick="validate()">
+		</form>
+		</div>
+	</div>
+</body>
+</html>

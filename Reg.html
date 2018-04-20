@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>
+Registration Page
+</title>
+<script type="text/javascript">
+function validate()
+{
+	if (myform.phno.value=="") 
+	{
+		alert("Please enter the mobile no");
+		myform.phno.focus();
+		return false;
+	}
+
+	var reg= [0-9] ;
+	if(((myform.phno.value).length)!=10)
+	{
+		alert("Invalid mobile");
+		myform.phno.focus();
+
+		return false;
+	}
+	return true;
+
+	if (myform.email.value=="") 
+	{
+		alert("Please enter the email");
+		myform.email.focus();
+		return false;
+	}
+
+	var reg= /^([a-z0-9._%+-])+@([a-z0-9.-])+\.([a-z]{2,4})$/ ;
+	if(reg.test(myform.email.value)==false)
+	{
+		alert("Invalid email");
+		myform.email.focus();
+
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body><br /><br />
+<form name="myform" action="">
+<table align="center" >
+<tr>
+<td>NAME</td>
+<td>:<input type="text" name="name" required /></td>
+</tr>
+<tr>
+<td>ADDRESS</td>
+<td>:<input type="text" name="addr" required/></td>
+</tr>
+<tr>
+<td>CONTACT NUMBER</td>
+<td>:<input type="text" name="phno"/></td>
+</tr>
+<tr>
+<td>Email Id</td>
+<td>:<input type="text" name="email"/></td>
+</tr>
+</table>
+<br /><br />
+<div align="center">
+<input type="submit" value="ok" onclick="validate()" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="clear" />
+</div>
+</form>
+</body>
+</html>
